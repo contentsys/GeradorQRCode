@@ -5,7 +5,7 @@
 			</div>
 		</div>
 		<div class='footer'>
-			Controle de Materiais - Todos os direitos reservados 
+			Juice in Time Technology - Todos os direitos reservados 
 		</div>
 	</body>
 </html>
