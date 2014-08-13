@@ -1,5 +1,5 @@
 <?php
-use Entities\Funcionario;
+use Entities\Cliente;
 
 include_once '../templates/topo.php';
 
@@ -13,7 +13,9 @@ if(empty($funcionario))
 	$cliente = new Cliente();
 	
 ?>
-
+	<form action="FormCadastraCliente.php">
+		<input type="submit" value="Adicionar Novo">
+	</form>
 	<div class="tabs center">
 			<ul>
 				<li><a href="#tabs-1">Cliente</a></li>
@@ -23,16 +25,16 @@ if(empty($funcionario))
 					<div class='field' >
 						<label>Nome</label>
 						<input type="hidden" value="<?php echo $id;?>" id='hidId' onkeypress="mascara(this,maiusculo)" />
-						<input type='text' id='txtNome' value='<?php echo $funcionario->getNome();?>' size='30' onkeypress="mascara(this,maiusculo)" />
+						<input type='text' id='txtNome' value='<?php echo $cliente->getNome();?>' size='30' onkeypress="mascara(this,maiusculo)" />
 					</div>
 					
 					<div class='field'>
 						<label>E-mail</label>
-						<input type='text' id='txtEmail' value='<?php echo $funcionario->getEmail();?>'  size='25' />
+						<input type='text' id='txtEmail' value='<?php echo $cliente->getEmail();?>'  size='25' />
 					</div>
 					<div class='field'>
 						<label>Telefone</label>
-						<input type='text' id='txtTelefone' value='<?php echo $funcionario->getTelefone();?>' size='12' />
+						<input type='text' id='txtTelefone' value='<?php echo $cliente->getTelefone();?>' size='12' />
 						<script type="text/javascript">
 							$("#txtTelefone").setMask('phone');
 						</script>
@@ -45,7 +47,7 @@ if(empty($funcionario))
 				<button id='btnSalvar'>Salvar</button>
 				<script type="text/javascript">
 					$("#btnSalvar").click(function(){
-						if($('#txtNome').val() == '' || $('#txtEmail').val() == '' ){
+						if($('#txtNome').val() == ''  ){
 							alert('Nome e email sao dados obrigatorios!', 'Atencao');
 						
 						}else{
@@ -59,9 +61,10 @@ if(empty($funcionario))
 									
 							}, function(xml){
 									erro = $(xml).find('erro').text();
+									id = $(xml).find('id').text();
 									if(parseInt(erro) == 0){
 										msg = "O Cliente foi salvo com sucesso!";
-										
+										$("#hidId").val(id);
 										
 									}
 									else{
