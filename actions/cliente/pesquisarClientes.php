@@ -2,7 +2,7 @@
 use Entities\Funcionario;
 $strBusca = $_REQUEST['strBusca'];
 
-$dql  = "select c from Entities\Clientes c where 1=1 ";
+$dql  = "select c from Entities\Cliente c where 1=1 ";
 $dql .= " and c.nome like :parametro or c.email like :parametro or c.telefone like :parametro ";
 $strBusca = "%$strBusca%";
 $q = $em->createQuery($dql);
