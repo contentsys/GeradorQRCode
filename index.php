@@ -9,13 +9,13 @@ if(isset($_REQUEST["removeCookie"])){
 	header("Location: index.php");
 }
 if (isset($_SESSION['dados'])){
-	header("Location: ui/PaginaInicial.php");
+	header("Location: ui/cliente/FormConsultaClientes.php");
 }
 else if (isset( $_COOKIE["dados"])){
 	
 	$dados = unserialize($_COOKIE["dados"]);
 	$_SESSION["dados"] = $dados;
-	header("Location: ui/PaginaInicial.php");
+	header("Location: ui/cliente/FormConsultaClientes.php");
 }
 else{
 	header("Location: ui/login/pagina-login.php");

@@ -9,15 +9,7 @@ $autoridade = '';
 				<div class='outer-menu'>
 					<ul class="sf-menu">
 							<li class="current">
-								<a href="cliente/FormCadastraCliente.php">QR Code Clientes<span class="ui-icon ui-icon-document" style="float: right; margin: -0.2em .3em .3em .3em;"></span></a>
-									<ul>
-										<li>
-											<a href="cliente/FormCadastraCliente.php">Cadastrar/a>
-										</li>
-										<li>
-											<a href="cliente/FormConsultaCliente.php">Localizar</a>
-										</li>
-							   		</ul>
+								<a href="cliente/FormCadastraCliente.php">Cadastrar Clientes<span class="ui-icon ui-icon-document" style="float: right; margin: -0.2em .3em .3em .3em;"></span></a>
 							</li>
 							<li>
 								<a href="administracao/FormAlteraSenha.php">Alterar Senha<span class="ui-icon ui-icon-gear" style="float: right; margin: -0.2em .3em .3em .3em;"></span></a>
