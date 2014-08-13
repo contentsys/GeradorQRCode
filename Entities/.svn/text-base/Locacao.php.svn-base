@@ -1,0 +1,165 @@
+<?php
+namespace Entities;
+
+/**
+ * @Entity
+ */
+class Locacao {
+
+	/**
+	 * @Id @Column(type="integer") @GeneratedValue
+	 */
+	private $id;
+
+	public function getId()
+	{
+		return $this->id;
+	}
+
+	public function setId($value)
+	{
+		$this->id = $value;
+	}
+
+	/**
+	 * @Column(type="string")
+	 */
+	private $fornecedor;
+	 
+
+
+	public function getFornecedor()
+	{
+		return $this->fornecedor;
+	}
+
+	public function setFornecedor($value)
+	{
+		$this->fornecedor = $value;
+	}
+	
+	
+	/**
+	 * @Column(type="date")
+	 */
+	private $dataLocacao;
+	 
+
+
+	public function getDataLocacao()
+	{
+		return $this->dataLocacao;
+	}
+
+	public function setDataLocacao($value)
+	{
+		$this->dataLocacao = $value;
+	}
+	
+	/**
+	 * @Column(type="date", nullable=true)
+	 */
+	private $dataDevolucao;
+	 
+
+
+	public function getDataDevolucao()
+	{
+		return $this->dataDevolucao;
+	}
+
+	public function setDataDevolucao($value)
+	{
+		$this->dataDevolucao = $value;
+	}
+	
+	/**
+	 * @Column(type="string")
+	 */
+	private $equipamento;
+	 
+
+
+	public function getEquipamento()
+	{
+		return $this->equipamento;
+	}
+
+	public function setEquipamento($value)
+	{
+		$this->equipamento = $value;
+	}
+	
+	
+	/**
+	 * @Column(type="string")
+	 */
+	private $contrato;
+	 
+
+
+	public function getContrato()
+	{
+		return $this->contrato;
+	}
+
+	public function setContrato($value)
+	{
+		$this->contrato = $value;
+	}
+	
+	
+	/**
+	 * @Column(type="float", nullable=true)
+	 */
+	private $valor;
+	 
+
+
+	public function getValor()
+	{
+		return $this->valor;
+	}
+
+	public function setValor($value)
+	{
+		$this->valor = $value;
+	}
+	
+	
+	/**
+	 * @Column(type="boolean")
+	 */
+	private $locado;
+	 
+
+
+	public function getLocado()
+	{
+		return $this->locado;
+	}
+
+	public function setLocado($value)
+	{
+		$this->locado = $value;
+	}
+	
+	/**
+	   * @ManyToOne(targetEntity="Obras")
+	   * @JoinColumn(name="obrasId", referencedColumnName="id")
+	*/
+	private $obra;
+	    
+	
+	
+	public function getObra() 
+	{
+	  return $this->obra;
+	}
+	
+	public function setObra($value) 
+	{
+	  $this->obra = $value;
+	}
+	
+}

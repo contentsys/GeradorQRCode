@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Event/Listeners
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Event/Listeners/index.php
+END
+MysqlSessionInit.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Event/Listeners/MysqlSessionInit.php
+END
+OracleSessionInit.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Event/Listeners/OracleSessionInit.php
+END

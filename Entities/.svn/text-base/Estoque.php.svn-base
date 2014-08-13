@@ -1,0 +1,128 @@
+<?php
+namespace Entities;
+/**
+ * @Entity
+ */
+class Estoque {
+
+	/**
+	* @Id @Column(type="integer") @GeneratedValue
+	*/
+	private $id;
+	
+	public function getId() 
+	{
+	  return $this->id;
+	}
+	
+	public function setId($value) 
+	{
+	  $this->id = $value;
+	}
+	
+	/**
+	   * @ManyToOne(targetEntity="Materiais")
+	   * @JoinColumn(name="materialId", referencedColumnName="id")
+	*/
+	
+	private $material;
+	    
+	
+	
+	public function getMaterial() 
+	{
+	  return $this->material;
+	}
+	
+	public function setMaterial($value) 
+	{
+	  $this->material = $value;
+	}
+	
+	/**
+	  * @Column(type="string")
+	  */
+	private $quantidade;
+	    
+	
+	
+	public function getQuantidade() 
+	{
+	  return $this->quantidade;
+	}
+	
+	public function setQuantidade($value) 
+	{
+	  $this->quantidade = $value;
+	}
+	
+	/**
+	   * @ManyToOne(targetEntity="Obras")
+	   * @JoinColumn(name="obrasId", referencedColumnName="id")
+	*/
+	private $obra;
+	    
+	
+	
+	public function getObra() 
+	{
+	  return $this->obra;
+	}
+	
+	public function setObra($value) 
+	{
+	  $this->obra = $value;
+	}
+	
+	
+	/**
+	* @Column(type="date")
+	*/
+	private $data;
+	
+	
+	public function getData()
+	{
+		return $this->data;
+	}
+	
+	public function setData($value)
+	{
+		$this->data = $value;
+	}
+	
+	/**
+	  * @Column(type="string")
+	  */
+	private $propriedade;
+	    
+	
+	
+	public function getPropriedade() 
+	{
+	  return $this->propriedade;
+	}
+	
+	public function setPropriedade($value) 
+	{
+	  $this->propriedade = $value;
+	}
+	
+	/** 
+	   * @OneToMany(targetEntity="FuncionarioEstoque", mappedBy="estoque")
+	   */
+	private $funcionariosEmPosse;
+	    
+	
+	
+	public function getFuncionariosEmPosse() 
+	{
+	  return $this->funcionariosEmPosse;
+	}
+	
+	public function setFuncionariosEmPosse($value) 
+	{
+	  $this->funcionariosEmPosse = $value;
+	}
+
+}

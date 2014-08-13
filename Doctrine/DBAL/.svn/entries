@@ -1,0 +1,211 @@
+8
+
+dir
+69
+https://controlemateriais.googlecode.com/svn/SistemaGj/raiz/Doctrine/DBAL
+https://controlemateriais.googlecode.com/svn
+
+
+
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f2e23af1-b2e6-7f30-61da-2ca13ca9c70e
+
+Configuration.php
+file
+
+
+
+
+2011-09-28T03:24:32.281000Z
+b408cebe2da2d49454f97fe64eef35d0
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+Connection.php
+file
+
+
+
+
+2011-09-28T03:24:30.625000Z
+e80706911d6fb1091fe80940a8d5e93d
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+ConnectionException.php
+file
+
+
+
+
+2011-09-28T03:24:34.734000Z
+f878807a5185a6b81e9c0c6b157d1ab1
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+DBALException.php
+file
+
+
+
+
+2011-09-28T03:24:36.140000Z
+c2132ee4090228a45451ffdea4249b32
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+Driver
+dir
+
+Driver.php
+file
+
+
+
+
+2011-09-28T03:24:30.437000Z
+9bcc10e9061de7b3f81dfae060f425af
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+DriverManager.php
+file
+
+
+
+
+2011-09-28T03:24:36.156000Z
+377f54a74e235b3ead5013bafe3fe504
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+Event
+dir
+
+Events.php
+file
+
+
+
+
+2011-09-28T03:24:30.984000Z
+1a05c75bc98ac76b8ccf0683f6a42b2a
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+LockMode.php
+file
+
+
+
+
+2011-09-28T03:24:30.468000Z
+f05997342439492aa37fbcc6a68b419f
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+Logging
+dir
+
+Platforms
+dir
+
+Portability
+dir
+
+Query
+dir
+
+README.markdown
+file
+
+
+
+
+2011-09-28T03:24:36.171000Z
+d41d8cd98f00b204e9800998ecf8427e
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+SQLParserUtils.php
+file
+
+
+
+
+2011-09-28T03:24:30.453000Z
+15b86c72b7d4dd8e77f09bd2bcd25009
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+Schema
+dir
+
+Statement.php
+file
+
+
+
+
+2011-09-28T03:24:30.968000Z
+8a9ce974d1bf067bdd2a615e1e91635d
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+Tools
+dir
+
+Types
+dir
+
+Version.php
+file
+
+
+
+
+2011-09-28T03:24:36.140000Z
+ec3fa54e3a4a04499365ec51e49fde1a
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+index.php
+file
+
+
+
+
+2011-09-28T03:24:32.281000Z
+81051bcc2cf1bedf378224b0a93e2877
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+

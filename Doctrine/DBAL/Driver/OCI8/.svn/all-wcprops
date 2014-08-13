@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Driver/OCI8
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Driver/OCI8/index.php
+END
+Driver.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Driver/OCI8/Driver.php
+END
+OCI8Statement.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Driver/OCI8/OCI8Statement.php
+END
+OCI8Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Driver/OCI8/OCI8Exception.php
+END
+OCI8Connection.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Driver/OCI8/OCI8Connection.php
+END

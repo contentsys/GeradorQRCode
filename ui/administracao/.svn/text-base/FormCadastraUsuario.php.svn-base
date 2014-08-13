@@ -1,0 +1,112 @@
+<?php
+use Entities\Funcionario;
+
+include_once '../templates/topo.php';
+
+$id= '';
+
+if(isset($_REQUEST['id']))
+	$id = $_REQUEST['id'];
+	
+$funcionario = $em->find("Entities\Funcionario", $id);
+if(empty($funcionario))
+	$funcionario = new Funcionario();
+?>
+	<div class="tabs center">
+			<ul>
+				<li><a href="#tabs-1">Usuario do sistema</a></li>
+			</ul>
+			<div id="tabs-1">
+				<div cols='3'>
+					<div class='field'>
+						<label>Funcionario:</label>
+						<select id='selFuncionario' >
+							<option value='0'>Selecione</option>
+							<?php 
+								$queryEngResponsavel = $em->createQuery("select c from Entities\Funcionario c where c.isAdm = 1");
+								$engenheiros = $queryEngResponsavel->getResult();
+
+								foreach ($engenheiros as $engenheiro) {
+									if(isset($_REQUEST['id'])){
+										$selected = "";
+										if ($engenheiro->getId() == $obras->getFuncionario()->getId()){
+											$selected = "selected='selected'";
+										}
+										echo "<option value='".$engenheiro->getId()."'".$selected." >".$engenheiro->getNome()."</option>";
+									}else{
+										echo "<option value='".$engenheiro->getId()."' >".$engenheiro->getNome()."</option>";
+									}
+								}
+							?>
+						</select>
+					</div>
+					<div class='field'>
+						<label>Login:</label>
+						<input type="text" id="txtLogin" size="40" />
+					</div>
+					<div class='field'>
+						<label>Senha:</label>
+						<input type="password" id="txtSenha" />
+					</div>
+					<div class='field'>
+						<label>Confirma senha:</label>
+						<input type="password" id="txtConfirmaSenha" />
+					</div>
+					<div class='field'>
+						<label>Autoridade</label>
+						<select id="selAutoridade">
+							<option value="0" >Selecione</option>
+							<option value="1" >Administrativo</option>
+							<option value="2" >Apontador</option>
+						</select>
+					</div>
+				</div>
+			</div>
+	
+			<div class='footer'>
+				<button id='btnSalvar'>Salvar</button>
+				<button id='btnCancelar'>Cancelar</button>
+				<script type="text/javascript">
+					$("#btnSalvar").click(function(){
+						if($('#selAutoridade').val() == 0){
+							 alert('Favor preencher todos os campos!', 'Atencao');
+						}else{
+							if($('#txtSenha').val() != $('#txtConfirmaSenha').val()){
+								alert('As senha devem ser iguais','Atencao');
+							}else{
+								utils.ajax('login/criarUsuario', {
+									login: $('#txtLogin').val(),
+									funcionario: $('#selFuncionario').val(),
+									autoridade: $('#selAutoridade').val(),
+									senha: $('#txtSenha').val()
+										
+								}, function(xml){
+										erro = $(xml).find('erro').text();
+										if(parseInt(erro) == 0){
+											msg = "O usuario foi salvo com sucesso!";
+		
+											$('#txtLogin').val(''),
+											$('#txtSenha').val(''),
+											$('#txtConfirmaSenha').val('');
+											$('#selFuncionario').val('0');
+											$('#selFuncionario').selectmenu();
+											$('#selAutoridade').val('0');
+											$('#selAutoridade').selectmenu();
+											
+										}
+										else{
+											msg = "O usuario NAO foi salvo com sucesso!";
+										}
+										alert(msg, 'Usuario');
+								});
+							}
+						}
+					});
+				</script>
+			</div>
+	</div>
+
+<?php 
+if(!$popup)
+	include_once '../templates/footer.php';
+?>

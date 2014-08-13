@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/Common/Cache
+END
+ArrayCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/Common/Cache/ArrayCache.php
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/Common/Cache/index.php
+END
+ZendDataCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/Common/Cache/ZendDataCache.php
+END
+Cache.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/Common/Cache/Cache.php
+END
+AbstractCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/Common/Cache/AbstractCache.php
+END
+ApcCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/Common/Cache/ApcCache.php
+END
+MemcacheCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/Common/Cache/MemcacheCache.php
+END
+XcacheCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/Common/Cache/XcacheCache.php
+END

@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^(.*)\.[\d]+\.(css|js)$ $1.$2 [L]

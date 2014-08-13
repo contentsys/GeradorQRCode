@@ -1,0 +1,187 @@
+<?php
+namespace Entities;
+/**
+ * @Entity
+ */
+class Aquisicao {
+	
+	public function __construct(){
+		
+	}
+
+	/**
+	* @Id @Column(type="integer") @GeneratedValue
+	*/
+	private $id;
+	
+	
+	
+	public function setId($id){
+		$this->id = $Id;
+	}
+	public function getId(){
+		return $this->id;
+	}
+	
+	/** @ManyToOne(targetEntity="Funcionario")
+	   * @JoinColumn(name="funcionarioId", referencedColumnName="id")
+	   */
+	private $funcionario;
+
+	
+	/** @ManyToOne(targetEntity="Funcionario")
+	   * @JoinColumn(name="responsavelId", referencedColumnName="id")
+	   */
+	private $responsavel;
+	
+	/**
+	  * @Column(type="datetime")
+	  */
+	private $dataAquisicao;
+
+	
+	/**
+	  * @Column(type="datetime", nullable=true)
+	  */
+	private $dataDevolucao;
+	
+	/** @ManyToOne(targetEntity="Estoque")
+	   * @JoinColumn(name="estoqueId", referencedColumnName="id")
+	   */
+	private $estoque;
+
+	
+	/**
+	  * @Column(type="string")
+	  */
+	private $descricaoMaterial;
+
+	
+	/**
+	  * @Column(type="float")
+	  */
+	private $qtd;
+	
+	/**
+	  * @Column(type="string", nullable=true)
+	  */
+	private $obs;
+
+	/**
+	  * @Column(type="string", nullable=true)
+	  */
+	private $motivoDevolucao; //podera ser por PERDA / DEVOLUCAO_ESTOQUE / DEVOLUCAO_VENC 
+	
+	
+	    
+	
+	
+	public function getMotivoDevolucao() 
+	{
+	  return $this->motivoDevolucao;
+	}
+	
+	public function setMotivoDevolucao($value) 
+	{
+	  $this->motivoDevolucao = $value;
+	}
+	
+	
+	public function getObs() 
+	{
+	  return $this->obs;
+	}
+	
+	public function setObs($value) 
+	{
+	  $this->obs = $value;
+	}
+	    
+	
+	
+	public function getQtd() 
+	{
+	  return $this->qtd;
+	}
+	
+	public function setQtd($value) 
+	{
+	  $this->qtd = $value;
+	}
+	
+	
+	public function getDescricaoMaterial() 
+	{
+	  return $this->descricaoMaterial;
+	}
+	
+	public function setDescricaoMaterial($value) 
+	{
+	  $this->descricaoMaterial = $value;
+	}
+	
+	
+	public function getEstoque() 
+	{
+	  return $this->estoque;
+	}
+	
+	public function setEstoque($value) 
+	{
+	  $this->estoque = $value;
+	}
+	
+	    
+	
+	
+	public function getDataDevolucao() 
+	{
+	  return $this->dataDevolucao;
+	}
+	
+	public function setDataDevolucao($value) 
+	{
+	  $this->dataDevolucao = $value;
+	}
+	
+	
+	public function getDataAquisicao() 
+	{
+	  return $this->dataAquisicao;
+	}
+	
+	public function setDataAquisicao($value) 
+	{
+	  $this->dataAquisicao = $value;
+	}
+
+	
+	
+	
+	public function getResponsavel() 
+	{
+	  return $this->responsavel;
+	}
+	
+	public function setResponsavel($value) 
+	{
+	  $this->responsavel = $value;
+	}
+	
+	public function getFuncionario() 
+	{
+	  return $this->funcionario;
+	}
+	
+	public function setFuncionario($value) 
+	{
+	  $this->funcionario = $value;
+	}
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM
+END
+Configuration.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Configuration.php
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/index.php
+END
+Events.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Events.php
+END
+EntityManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/EntityManager.php
+END
+UnitOfWork.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/UnitOfWork.php
+END
+PessimisticLockException.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/PessimisticLockException.php
+END
+EntityNotFoundException.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/EntityNotFoundException.php
+END
+README.markdown
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/README.markdown
+END
+NoResultException.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/NoResultException.php
+END
+NonUniqueResultException.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/NonUniqueResultException.php
+END
+QueryBuilder.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/QueryBuilder.php
+END
+Query.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Query.php
+END
+AbstractQuery.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/AbstractQuery.php
+END
+NativeQuery.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/NativeQuery.php
+END
+EntityRepository.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/EntityRepository.php
+END
+PersistentCollection.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/PersistentCollection.php
+END
+TransactionRequiredException.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/TransactionRequiredException.php
+END
+ORMException.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/ORMException.php
+END
+Version.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Version.php
+END
+OptimisticLockException.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/OptimisticLockException.php
+END

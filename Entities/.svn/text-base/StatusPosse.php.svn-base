@@ -1,0 +1,39 @@
+<?php
+namespace Entities;
+/**
+ * @Entity
+ */
+class StatusPosse {
+
+	/**
+	* @Id @Column(type="integer") @GeneratedValue
+	*/
+	private $id;
+	
+	
+	
+	public function setId($id){
+		$this->id = $Id;
+	}
+	public function getId(){
+		return $this->id;
+	}
+	
+	/**
+	  * @Column(type="string")
+	  */
+	private $descricao;
+
+	
+	
+	
+	public function getDescricao() 
+	{
+	  return $this->descricao;
+	}
+	
+	public function setDescricao($value) 
+	{
+	  $this->descricao = $value;
+	}
+}

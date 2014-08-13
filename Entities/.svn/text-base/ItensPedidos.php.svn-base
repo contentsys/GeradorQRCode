@@ -1,0 +1,97 @@
+<?php
+namespace Entities;
+/**
+ * @Entity
+ */
+class ItensPedidos {
+
+	/**
+	 * @Id @Column(type="integer") @GeneratedValue
+	 */
+	private $id;
+
+	public function getId()
+	{
+		return $this->id;
+	}
+
+	public function setId($value)
+	{
+		$this->id = $value;
+	}
+
+	
+	/**
+	   * @ManyToOne(targetEntity="Estoque")
+	   * @JoinColumn(name="estoqueId", referencedColumnName="id")
+	*/
+	private $estoque;
+	 
+
+
+	public function getEstoque()
+	{
+		return $this->estoque;
+	}
+
+	public function setEstoque($value)
+	{
+		$this->estoque = $value;
+	}
+
+	/**
+	 * @Column(type="string")
+	 */
+	private $quantidade;
+	 
+
+
+	public function getQuantidade()
+	{
+		return $this->quantidade;
+	}
+
+	public function setQuantidade($value)
+	{
+		$this->quantidade = $value;
+	}
+
+	/**
+	 * @Column(type="string")
+	 */
+	private $dataRetirada;
+	 
+
+
+	public function getDataRetirada()
+	{
+		return $this->dataRetirada;
+	}
+
+	public function setDataRetirada($value)
+	{
+		$this->dataRetirada = $value;
+	}
+	
+	/**
+	   * @ManyToOne(targetEntity="Pedidos")
+	   * @JoinColumn(name="pedidosId", referencedColumnName="id")
+	*/
+	private $pedido;
+	    
+	
+	
+	public function getPedido() 
+	{
+	  return $this->pedido;
+	}
+	
+	public function setPedido($value) 
+	{
+	  $this->pedido = $value;
+	}
+	 
+	
+	
+
+}

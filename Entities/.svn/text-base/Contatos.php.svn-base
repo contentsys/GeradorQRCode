@@ -1,0 +1,134 @@
+<?php
+namespace Entities;
+/**
+ * @Entity
+ */
+  use Doctrine\Common\Collections;
+
+class Contatos {
+
+	/**
+	* @Id @Column(type="integer") @GeneratedValue
+	*/
+	private $id;
+	
+	public function getId() 
+	{
+	  return $this->id;
+	}
+	
+	public function setId($value) 
+	{
+	  $this->id = $value;
+	}
+	
+	
+	
+	/**
+	   * @ManyToOne(targetEntity="Funcionario")
+	   * @JoinColumn(name="funcionarioId", referencedColumnName="id")
+	*/
+	private $funcionario;
+	    
+	
+	
+	public function getFuncionario() 
+	{
+		
+	  return ($this->funcionario=="")? new Funcionario(): $this->funcionario;
+	}
+	
+	public function setFuncionario($value) 
+	{
+	  $this->funcionario = $value;
+	}
+	
+	/**
+	  * @Column(type="string")
+	  */
+	private $email;
+	    
+	
+	
+	public function getEmail() 
+	{
+	  return $this->email;
+	}
+	
+	public function setEmail($value) 
+	{
+	  $this->email = $value;
+	}
+	
+	/**
+	  * @Column(type="string")
+	  */
+	private $telefone;
+	    
+	
+	
+	public function getTelefone() 
+	{
+	  return $this->telefone;
+	}
+	
+	public function setTelefone($value) 
+	{
+	  $this->telefone = $value;
+	}
+	
+	/**
+	  * @Column(type="string")
+	  */
+	private $celular;
+	    
+	
+	
+	public function getCelular() 
+	{
+	  return $this->celular;
+	}
+	
+	public function setCelular($value) 
+	{
+	  $this->celular = $value;
+	}
+	
+	/**
+	  * @Column(type="string")
+	  */
+	private $nextel;
+	    
+	
+	
+	public function getNextel() 
+	{
+	  return $this->nextel;
+	}
+	
+	public function setNextel($value) 
+	{
+	  $this->nextel = $value;
+	}
+	
+	/**
+	  * @Column(type="string")
+	  */
+	private $obra;
+	    
+	
+	/**
+	   * @ManyToOne(targetEntity="Obras")
+	   * @JoinColumn(name="obrasId", referencedColumnName="id")
+	*/
+	public function getObra() 
+	{
+	  return $this->obra;
+	}
+	
+	public function setObra($value) 
+	{
+	  $this->obra = $value;
+	}
+	
+}

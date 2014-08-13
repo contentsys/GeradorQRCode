@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/Common/Persistence
+END
+ObjectRepository.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/Common/Persistence/ObjectRepository.php
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/Common/Persistence/index.php
+END
+ObjectManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/Common/Persistence/ObjectManager.php
+END

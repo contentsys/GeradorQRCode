@@ -1,0 +1,163 @@
+8
+
+dir
+69
+https://controlemateriais.googlecode.com/svn/SistemaGj/raiz/Doctrine/Common
+https://controlemateriais.googlecode.com/svn
+
+
+
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f2e23af1-b2e6-7f30-61da-2ca13ca9c70e
+
+Annotations
+dir
+
+Cache
+dir
+
+ClassLoader.php
+file
+
+
+
+
+2011-09-28T03:24:38.421000Z
+d8b2eefc0406681fb9e9065062320c3e
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+Collections
+dir
+
+CommonException.php
+file
+
+
+
+
+2011-09-28T03:24:39.015000Z
+c82c7d3775b7784b722fb3e38673ea16
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+EventArgs.php
+file
+
+
+
+
+2011-09-28T03:24:38.687000Z
+30f3a639f896fd43a73c295edb604123
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+EventManager.php
+file
+
+
+
+
+2011-09-28T03:24:38.421000Z
+4a586b9c463f51931e25c624c193b701
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+EventSubscriber.php
+file
+
+
+
+
+2011-09-28T03:24:39.000000Z
+1987edea28becdc5c66bc985c04de1d6
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+Lexer.php
+file
+
+
+
+
+2011-09-28T03:24:38.968000Z
+eb0f2b95ce15cc4c2055e70cf8d3671a
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+NotifyPropertyChanged.php
+file
+
+
+
+
+2011-09-28T03:24:39.015000Z
+31e9d30e8c264e3a11ee5c06a6927d0a
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+Persistence
+dir
+
+PropertyChangedListener.php
+file
+
+
+
+
+2011-09-28T03:24:38.984000Z
+25ca218e62376e47ea1848184b1ad25a
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+Util
+dir
+
+Version.php
+file
+
+
+
+
+2011-09-28T03:24:38.984000Z
+4dbeb14b2e303d4bc430661eadfba435
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+
+index.php
+file
+
+
+
+
+2011-09-28T03:24:39.156000Z
+81051bcc2cf1bedf378224b0a93e2877
+2011-09-27T18:05:39.676553Z
+3
+hebling@gmail.com
+

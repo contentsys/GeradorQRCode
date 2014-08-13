@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/64/SistemaGj/raiz/Entities
+END
+Aquisicao.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/49/SistemaGj/raiz/Entities/Aquisicao.php
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/40/SistemaGj/raiz/Entities/index.php
+END
+Obras.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/42/SistemaGj/raiz/Entities/Obras.php
+END
+FuncionarioEstoque.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/16/SistemaGj/raiz/Entities/FuncionarioEstoque.php
+END
+Funcionario.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/63/SistemaGj/raiz/Entities/Funcionario.php
+END
+Locacao.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/64/SistemaGj/raiz/Entities/Locacao.php
+END
+Pedidos.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/14/SistemaGj/raiz/Entities/Pedidos.php
+END
+ItensPedidos.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/14/SistemaGj/raiz/Entities/ItensPedidos.php
+END
+Contatos.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/6/SistemaGj/raiz/Entities/Contatos.php
+END
+Login.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/63/SistemaGj/raiz/Entities/Login.php
+END
+StatusPosse.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/16/SistemaGj/raiz/Entities/StatusPosse.php
+END
+Materiais.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/11/SistemaGj/raiz/Entities/Materiais.php
+END
+Estoque.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/14/SistemaGj/raiz/Entities/Estoque.php
+END

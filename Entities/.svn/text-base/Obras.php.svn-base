@@ -1,0 +1,210 @@
+<?php
+namespace Entities;
+/**
+ * @Entity
+ */
+class Obras {
+
+	/**
+	* @Id @Column(type="integer") @GeneratedValue
+	*/
+	private $id;
+	
+	public function getId() 
+	{
+	  return $this->id;
+	}
+	
+	public function setId($value) 
+	{
+	  $this->id = $value;
+	}
+	
+	
+	
+	/**
+	  * @Column(type="string")
+	  */
+	private $nomeObra;
+	    
+	
+	
+	public function getNomeObra() 
+	{
+	  return $this->nomeObra;
+	}
+	
+	public function setNomeObra($value) 
+	{
+	  $this->nomeObra = $value;
+	}
+	
+	/**
+	   * @ManyToOne(targetEntity="Funcionario")
+	   * @JoinColumn(name="funcionarioId", referencedColumnName="id")
+	*/
+	private $funcionario;
+	    
+	
+	
+	public function getFuncionario() 
+	{
+	  return $this->funcionario;
+	}
+	
+	public function setFuncionario($value) 
+	{
+	  $this->funcionario = $value;
+	}
+	
+	
+	
+	/**
+	  * @Column(type="string")
+	  */
+	private $endObra;
+	    
+	
+	
+	public function getEndObra() 
+	{
+	  return $this->endObra;
+	}
+	
+	public function setEndObra($value) 
+	{
+	  $this->endObra = $value;
+	}
+	
+	/**
+	* @Column(type="string")
+	*/
+	private $nroEndObra;
+	 
+	
+	
+	public function getNroEndObra()
+	{
+		return $this->nroEndObra;
+	}
+	
+	public function setNroEndObra($value)
+	{
+		$this->nroEndObra = $value;
+	}
+	
+	
+	/**
+	* @Column(type="string")
+	*/
+	private $bairroObra;
+	
+	
+	
+	public function getBairroObra()
+	{
+		return $this->bairroObra;
+	}
+	
+	public function setBairroObra($value)
+	{
+		$this->bairroObra = $value;
+	}
+	
+	
+	/**
+	* @Column(type="string")
+	*/
+	private $cidadeObra;
+	
+	
+	
+	public function getCidadeObra()
+	{
+		return $this->cidadeObra;
+	}
+	
+	public function setCidadeObra($value)
+	{
+		$this->cidadeObra = $value;
+	}
+	
+	/**
+	* @Column(type="string")
+	*/
+	private $ufObra;
+	
+	
+	
+	public function getUfObra()
+	{
+		return $this->ufObra;
+	}
+	
+	public function setUfObra($value)
+	{
+		$this->ufObra = $value;
+	}
+	
+	
+	/**
+	  * @Column(type="string")
+	  */
+	private $registroObra;
+	    
+	
+	
+	public function getRegistroObra() 
+	{
+	  return $this->registroObra;
+	}
+	
+	public function setRegistroObra($value) 
+	{
+	  $this->registroObra = $value;
+	}
+	
+	
+	/**
+		* @OneToMany(targetEntity="Contatos", mappedBy="obra")
+	*/
+	private $contatos;
+	    
+	
+	
+	/**
+		* @OneToMany(targetEntity="Estoque", mappedBy="obra")
+	*/
+	private $estoques;
+	    
+	
+	
+	public function getEstoques() 
+	{
+	  return $this->estoques;
+	}
+	
+	public function setEstoques($value) 
+	{
+	  $this->estoques = $value;
+	}
+	
+	
+	public function getContatos() 
+	{
+	  return $this->contatos;
+	}
+	
+	public function setContatos($value) 
+	{
+	  $this->contatos = $value;
+	}
+	
+	function Obras() {
+		$this->contatos = new \Doctrine\Common\Collections\ArrayCollection();
+		$this->estoques = new \Doctrine\Common\Collections\ArrayCollection();
+	}
+	
+	
+	
+}

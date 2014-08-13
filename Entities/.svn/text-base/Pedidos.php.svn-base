@@ -1,0 +1,87 @@
+<?php
+namespace Entities;
+/**
+ * @Entity
+ */
+class Pedidos {
+
+	/**
+	 * @Id @Column(type="integer") @GeneratedValue
+	 */
+	private $id;
+
+	public function getId()
+	{
+		return $this->id;
+	}
+
+	public function setId($value)
+	{
+		$this->id = $value;
+	}
+
+	/**
+	   * @ManyToOne(targetEntity="Funcionario")
+	   * @JoinColumn(name="funcionarioId", referencedColumnName="id")
+	*/
+	private $funcionario;
+
+
+
+	public function getFuncionario()
+	{
+		return $this->funcionario;
+	}
+
+	public function setFuncionario($value)
+	{
+		$this->funcionario = $value;
+	}
+
+	
+
+	/**
+	  * @Column(type="string")
+	  */
+	private $funcionarioResp;
+	    
+	
+	
+	public function getFuncioanarioResp() 
+	{
+	  return $this->funcionarioResp;
+	}
+	
+	public function setFuncioanarioResp($value) 
+	{
+	  $this->funcionarioResp = $value;
+	}
+	
+	
+	/**
+		* @OneToMany(targetEntity="ItensPedidos", mappedBy="pedido")
+	*/
+	private $itensPedidos;
+	
+	
+	    
+	
+	
+	public function getItensPedidos() 
+	{
+	  return $this->itensPedidos;
+	}
+	
+	public function setItensPedidos($value) 
+	{
+	  $this->itensPedidos = $value;
+	}
+	
+	function Pedidos() {
+		$this->itensPedidos = new \Doctrine\Common\Collection\ArrayCollection();
+	}
+	
+	
+	
+
+}

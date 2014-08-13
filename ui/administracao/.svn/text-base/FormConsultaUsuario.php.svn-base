@@ -1,0 +1,168 @@
+<?php
+use Entities\Login;
+
+include_once '../templates/topo.php';
+
+$strBusca = (isset($_REQUEST['strBusca']))? $_REQUEST['strBusca']: '';
+
+$campoBusca = (isset($_REQUEST['campoBusca']))? $_REQUEST['campoBusca']: '';
+
+$q = $em->createQuery("select c from Entities\Login c where 1=1 and :campoBusca = :strBusca");
+$q->setParameter("campoBusca", $campoBusca);
+$q->setParameter("strBusca", $strBusca);
+$usuarios = $q->getResult();
+
+if(empty($usuarios)){
+	
+	$usuarios = new \Doctrine\Common\Collections\ArrayCollection();
+}
+
+?>
+	
+	<div class="tabs center">
+			<ul>
+				<li><a href="#tabs-1">Buscar</a></li>
+			</ul>
+			<div id="tabs-1">
+				<div cols='5'>
+					<div class='field' >
+						<label>Texto</label>
+						<input type='text' id='txtBusca' size='35'/>
+					</div>
+					<script>
+						$('#txtBusca').keypress(function(e){
+							if(e.which == 13){
+								$('#btnBuscar').click();
+								}
+						});
+					</script>
+					<div class='field'>
+						<label>Buscar Por</label>
+						<select id='selBuscas'>
+							<option value='login'>Nome</option>
+						</select>
+					</div>
+					<div class='field'>
+						<label>&nbsp;</label>
+						<button id='btnBuscar'>Buscar</button>
+						<script type="text/javascript">
+							$(document).ready(function(){
+								$("#btnBuscar").click(function(){
+									utils.ajax('login/pesquisarUsuarios', {
+										tipoBusca: $('#selBuscas').val(),
+										strBusca: $('#txtBusca').val()
+									}, function(xml){
+										cont = 0;
+										$('.table_consulta tbody tr').each(function(){
+											if(cont!=0)
+												$(this).remove();
+											cont++;
+										});
+										index = 0;
+										$(xml).find('usuario').each(function(){
+											var id= $(this).find('id').text();
+											var nome = $(this).find('nome').text();
+											var login = $(this).find('login').text();
+											
+											$('.table_consulta tbody').append(utils.gerarLinha([id,
+																								nome,
+																								login], 0, 'trConsulta', index++,false));
+												$('#trConsulta_'+ id).click(function(){
+													$('#popupConsultaUsuario').dialog('open');
+													$('#hidIdPopup').val(id);
+												});
+										});
+										$('.table_consulta tfoot tr td').html(index + ' Resultado(s) Encontrado(s)');
+									});
+								});
+
+							});
+						</script>
+					</div>
+					
+				</div>
+				<div>
+					<table class='table_consulta'>
+						<tr>
+							<th>Nome</th>
+							<th>Login</th>
+						</tr>
+						<tfoot>
+							<tr>
+								<td colspan="2">Nenhum Resultado Encontrado</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			<div class='footer'>
+				
+			</div>
+	</div>
+<div id="popupConsultaUsuario">
+	<label>O que deseja fazer?</label>
+	<input type="hidden" id="hidIdPopup" />
+</div>
+<script>
+	$('#popupConsultaUsuario').dialog({
+		modal: true,
+		title: 'Consulta usuario',
+		autoOpen: false,
+		width: 350,
+		buttons: {
+			"Excluir": function(){
+				$(this).dialog('close');
+				$('#popupExcluirUsuario').dialog('open');
+			
+			},
+			"Cancelar": function(){
+				$(this).dialog('close');
+			}
+		}
+	});
+</script>
+<div id="popupExcluirUsuario">
+	<label>Deseja excluir o usuario?</label>
+</div>
+<script>
+	$('#popupExcluirUsuario').dialog({
+		modal: true,
+		title: 'Excluir usuario',
+		autoOpen: false,
+		width: 250,
+		buttons: {
+			"Sim": function(){
+			$(this).dialog('close');
+				utils.ajax('login/excluir', {
+					id: $('#hidIdPopup').val()
+					
+						
+				}, function(xml){
+						erro = $(xml).find('erro').text();
+						if(parseInt(erro) == 0){
+							msg = "Usuario excluido com sucesso!";
+	
+							$("#btnBuscar").click();
+							
+						}
+						else if(parseInt(erro) == 23000){
+							msg = "NAO foi possivel excluir, este usuario possui itens relacionados!";
+						}
+						else{
+							msg = "Usuario NAO foi excluido com sucesso!";
+						}
+						alert(msg, 'Usuario');
+				});
+			
+			},
+			"Nao": function(){
+				$(this).dialog('close');
+			}
+		}
+	});
+</script>
+
+<?php 
+if(!$popup)
+	include_once '../templates/footer.php';
+?>

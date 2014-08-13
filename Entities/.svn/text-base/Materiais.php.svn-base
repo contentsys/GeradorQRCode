@@ -1,0 +1,104 @@
+<?php
+namespace Entities;
+/**
+ * @Entity
+ */
+use Doctrine\Common\Collections;
+
+class Materiais {
+
+	/**
+	 * @Id @Column(type="integer") @GeneratedValue
+	 */
+	private $id;
+
+	public function getId()
+	{
+		return $this->id;
+	}
+
+	public function setId($value)
+	{
+		$this->id = $value;
+	}
+
+	/**
+	 * @Column(type="string")
+	 */
+	private $descricao;
+	 
+
+
+	public function getDescricao()
+	{
+		return $this->descricao;
+	}
+
+	public function setDescricao($value)
+	{
+		$this->descricao = $value;
+	}
+	
+	
+	/**
+	* @Column(type="float")
+	*/
+	private $tempoValidade;
+	 
+	
+	
+	public function getTempoValidade()
+	{
+		return $this->tempoValidade;
+	}
+	
+	public function setTempoValidade($value)
+	{
+		$this->tempoValidade = $value;
+	}
+	
+	
+
+	/**
+	 * @Column(type="string")
+	 */
+	private $ca;
+
+
+	 
+
+
+	public function getCa()
+	{
+		return $this->ca;
+	}
+
+	public function setCa($value)
+	{
+		$this->ca = $value;
+	}
+
+	
+
+	/**
+		* @OneToMany(targetEntity="Estoque", mappedBy="material")
+		*/
+	private $estoques;
+	 
+
+
+	public function getEstoques()
+	{
+		return $this->estoques;
+	}
+
+	public function setEstoques($value)
+	{
+		$this->estoques = $value;
+	}
+
+
+	function Materiais() {
+		$this->estoques= new Collections\ArrayCollection();
+	}
+}

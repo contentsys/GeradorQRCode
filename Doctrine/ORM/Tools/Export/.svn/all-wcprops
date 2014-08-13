@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Tools/Export
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Tools/Export/index.php
+END
+ClassMetadataExporter.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Tools/Export/ClassMetadataExporter.php
+END
+ExportException.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Tools/Export/ExportException.php
+END

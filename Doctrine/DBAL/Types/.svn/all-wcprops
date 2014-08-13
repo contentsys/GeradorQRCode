@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Types
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Types/index.php
+END
+DecimalType.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Types/DecimalType.php
+END
+BooleanType.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Types/BooleanType.php
+END
+IntegerType.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Types/IntegerType.php
+END
+StringType.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Types/StringType.php
+END
+DateTimeType.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Types/DateTimeType.php
+END
+SmallIntType.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Types/SmallIntType.php
+END
+VarDateTimeType.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Types/VarDateTimeType.php
+END
+BigIntType.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Types/BigIntType.php
+END
+TimeType.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Types/TimeType.php
+END
+TextType.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Types/TextType.php
+END
+ObjectType.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Types/ObjectType.php
+END
+DateType.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Types/DateType.php
+END
+ArrayType.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Types/ArrayType.php
+END
+FloatType.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Types/FloatType.php
+END
+Type.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Types/Type.php
+END
+DateTimeTzType.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Types/DateTimeTzType.php
+END
+ConversionException.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Types/ConversionException.php
+END

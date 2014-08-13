@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Platforms/Keywords
+END
+MsSQLKeywords.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Platforms/Keywords/MsSQLKeywords.php
+END
+DB2Keywords.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Platforms/Keywords/DB2Keywords.php
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Platforms/Keywords/index.php
+END
+OracleKeywords.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Platforms/Keywords/OracleKeywords.php
+END
+PostgreSQLKeywords.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Platforms/Keywords/PostgreSQLKeywords.php
+END
+KeywordList.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Platforms/Keywords/KeywordList.php
+END
+ReservedKeywordsValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Platforms/Keywords/ReservedKeywordsValidator.php
+END
+MySQLKeywords.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Platforms/Keywords/MySQLKeywords.php
+END
+SQLiteKeywords.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Platforms/Keywords/SQLiteKeywords.php
+END

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Tools/Console/Command
+END
+EnsureProductionSettingsCommand.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Tools/Console/Command/EnsureProductionSettingsCommand.php
+END
+ConvertDoctrine1SchemaCommand.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Tools/Console/Command/ConvertDoctrine1SchemaCommand.php
+END
+GenerateRepositoriesCommand.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Tools/Console/Command/GenerateRepositoriesCommand.php
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Tools/Console/Command/index.php
+END
+GenerateProxiesCommand.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Tools/Console/Command/GenerateProxiesCommand.php
+END
+ConvertMappingCommand.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Tools/Console/Command/ConvertMappingCommand.php
+END
+GenerateEntitiesCommand.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Tools/Console/Command/GenerateEntitiesCommand.php
+END
+InfoCommand.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Tools/Console/Command/InfoCommand.php
+END
+ValidateSchemaCommand.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Tools/Console/Command/ValidateSchemaCommand.php
+END
+RunDqlCommand.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Tools/Console/Command/RunDqlCommand.php
+END

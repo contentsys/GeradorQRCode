@@ -1,0 +1,12 @@
+<?php
+include_once './templates/topo.php';
+?>
+
+<div align="center" style="margin-top: 75px;">
+	<img src="../resources/img/logo.png" />
+</div>
+
+<?php
+if(!$popup)
+	include_once './templates/footer.php';
+?>

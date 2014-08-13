@@ -1,0 +1,230 @@
+<?php
+namespace Entities;
+
+/**
+ * @Entity
+ */
+use Doctrine\Common\Collections;
+
+class Funcionario {
+	
+	
+	/**
+	* @Id @Column(type="integer") @GeneratedValue
+	*/
+	private $id;
+	
+	public function getId() 
+	{
+	  return $this->id;
+	}
+	
+	public function setId($value) 
+	{
+	  $this->id = $value;
+	}
+	
+	/**
+	  * @Column(type="string")
+	  */
+	private $nome;
+	    
+	
+	
+	public function getNome() 
+	{
+	  return $this->nome;
+	}
+	
+	public function setNome($value) 
+	{
+	  $this->nome = $value;
+	}
+	
+	/**
+	  * @Column(type="string")
+	  */
+	private $matricula;
+	    
+	
+	
+	public function getMatricula() 
+	{
+	  return $this->matricula;
+	}
+	
+	public function setMatricula($value) 
+	{
+	  $this->matricula = $value;
+	}
+	
+	/**
+	  * @Column(type="string")
+	  */
+	private $telefone;
+	    
+	
+	
+	public function getTelefone() 
+	{
+	  return $this->telefone;
+	}
+	
+	public function setTelefone($value) 
+	{
+	  $this->telefone = $value;
+	}
+	
+	
+	/**
+	* @Column(type="string")
+	*/
+	private $nextel;
+	 
+	
+	
+	public function getNextel()
+	{
+		return $this->nextel;
+	}
+	
+	public function setNextel($value)
+	{
+		$this->nextel = $value;
+	}
+	
+	
+	
+	/**
+	* @Column(type="string")
+	*/
+	private $email;
+	 
+	
+	
+	public function getEmail()
+	{
+		return $this->email;
+	}
+	
+	public function setEmail($value)
+	{
+		$this->email = $value;
+	}
+	
+	
+	/**
+	* @Column(type="boolean")
+	*/
+	private $isAdm;
+	
+	
+	
+	public function getIsAdm()
+	{
+		return $this->isAdm;
+	}
+	
+	public function setIsAdm($value)
+	{
+		$this->isAdm = $value;
+	}
+	
+	
+	/**
+	   * @ManyToOne(targetEntity="Obras")
+	   * @JoinColumn(name="obrasId", referencedColumnName="id")
+	*/
+	private $obras;
+	
+	/** 
+	   * @OneToMany(targetEntity="Aquisicao", mappedBy="funcionario")
+	   */
+	private $aquisicoes;
+	    
+	
+	
+	public function getAquisicoes() 
+	{
+	  return $this->aquisicoes;
+	}
+	
+	public function setAquisicoes($value) 
+	{
+	  $this->aquisicoes = $value;
+	}
+	    
+	
+	
+	public function getObras() 
+	{
+	  return $this->obras;
+	}
+	
+	public function setObras($value) 
+	{
+	  $this->obras = $value;
+	}
+	
+	/** 
+	   * @OneToMany(targetEntity="FuncionarioEstoque", mappedBy="funcionario")
+	   */
+	private $itensEmPosse;
+	
+	
+	/** 
+	   * @OneToMany(targetEntity="Login", mappedBy="funcionario")
+	   */
+	private $login;
+	    
+	
+	
+	public function getLogin() 
+	{
+	  return $this->login;
+	}
+	
+	public function setLogin($value) 
+	{
+	  $this->login = $value;
+	}
+	    
+	
+	
+	public function getItensEmPosse() 
+	{
+	  return $this->itensEmPosse;
+	}
+	
+	public function setItensEmPosse($value) 
+	{
+	  $this->itensEmPosse = $value;
+	}
+	
+	function Funcionario() {
+
+		$this->aquisicoes = new Collections\ArrayCollection();
+		$this->login = new Collections\ArrayCollection();
+		
+		$this->itensEmPosse = new Collections\ArrayCollection();
+		$this->aquisicoes = new Collections\ArrayCollection();
+	}
+	
+	/**
+	  * @Column(type="integer")
+	  */
+	private $cargo;
+	    
+	
+	public function getCargo() 
+	{
+	  return $this->cargo;
+	}
+	
+	public function setCargo($value) 
+	{
+	  $this->cargo = $value;
+	}
+
+	
+}

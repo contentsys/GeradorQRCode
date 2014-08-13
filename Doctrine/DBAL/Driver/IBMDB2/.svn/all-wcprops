@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Driver/IBMDB2
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Driver/IBMDB2/index.php
+END
+DB2Statement.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Driver/IBMDB2/DB2Statement.php
+END
+DB2Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Driver/IBMDB2/DB2Exception.php
+END
+DB2Connection.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Driver/IBMDB2/DB2Connection.php
+END
+DB2Driver.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/DBAL/Driver/IBMDB2/DB2Driver.php
+END

@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Query/Expr
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Query/Expr/index.php
+END
+Join.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Query/Expr/Join.php
+END
+From.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Query/Expr/From.php
+END
+OrderBy.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Query/Expr/OrderBy.php
+END
+Func.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Query/Expr/Func.php
+END
+Literal.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Query/Expr/Literal.php
+END
+Select.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Query/Expr/Select.php
+END
+Andx.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Query/Expr/Andx.php
+END
+Comparison.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Query/Expr/Comparison.php
+END
+GroupBy.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Query/Expr/GroupBy.php
+END
+Base.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Query/Expr/Base.php
+END
+Composite.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Query/Expr/Composite.php
+END
+Math.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Query/Expr/Math.php
+END
+Orx.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/3/SistemaGj/raiz/Doctrine/ORM/Query/Expr/Orx.php
+END

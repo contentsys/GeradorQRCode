@@ -1,0 +1,173 @@
+<?php
+namespace Entities;
+/**
+ * @Entity
+ */
+class FuncionarioEstoque {
+
+	/**
+	* @Id @Column(type="integer") @GeneratedValue
+	*/
+	private $id;
+	
+	
+	/** @ManyToOne(targetEntity="Funcionario")
+	   * @JoinColumn(name="funcionarioId", referencedColumnName="id")
+	   */
+	private $funcionario;
+
+	
+	/** @ManyToOne(targetEntity="Estoque")
+	   * @JoinColumn(name="estoqueId", referencedColumnName="id")
+	   */
+	private $estoque;
+
+	
+	/** @ManyToOne(targetEntity="StatusPosse")
+	   * @JoinColumn(name="statusPosseId", referencedColumnName="id")
+	   */
+	private $status;
+	
+	
+	/**
+	  * @Column(type="date")
+	  */
+	private $dataAquisicao;
+
+	
+	/**
+	  * @Column(type="date")
+	  */
+	private $dataDevolucao;
+
+	
+	/** @ManyToOne(targetEntity="Funcionario")
+	   * @JoinColumn(name="responsavelAquisicaoId", referencedColumnName="id")
+	   */
+	private $responsavelAquisicao;
+
+	/** @ManyToOne(targetEntity="Funcionario")
+	   * @JoinColumn(name="responsavelDevolucaoId", referencedColumnName="id")
+	   */
+	private $responsavelDevolucao;
+
+	
+	/**
+	  * @Column(type="string")
+	  */
+	private $historicoAtualizacoes;
+	    
+	
+	/**
+	  * @Column(type="float")
+	  */
+	private $qtd;
+	    
+	
+	
+	public function getQtd() 
+	{
+	  return $this->qtd;
+	}
+	
+	public function setQtd($value) 
+	{
+	  $this->qtd = $value;
+	}
+	
+	
+	public function getHistoricoAtualizacoes() 
+	{
+	  return $this->historicoAtualizacoes;
+	}
+	
+	public function setHistoricoAtualizacoes($value) 
+	{
+	  $this->historicoAtualizacoes = $value;
+	}
+	
+	
+	public function getResponsavelDevolucao() 
+	{
+	  return $this->responsavelDevolucao;
+	}
+	
+	public function setResponsavelDevolucao($value) 
+	{
+	  $this->responsavelDevolucao = $value;
+	}
+	
+	
+	public function getResponsavelAquisicao() 
+	{
+	  return $this->responsavelAquisicao;
+	}
+	
+	public function setResponsavelAquisicao($value) 
+	{
+	  $this->responsavelAquisicao = $value;
+	}
+	
+	
+	public function getDataDevolucao() 
+	{
+	  return $this->dataDevolucao;
+	}
+	
+	public function setDataDevolucao($value) 
+	{
+	  $this->dataDevolucao = $value;
+	}
+	
+	
+	public function getDataAquisicao() 
+	{
+	  return $this->dataAquisicao;
+	}
+	
+	public function setDataAquisicao($value) 
+	{
+	  $this->dataAquisicao = $value;
+	}
+	    
+	
+	
+	public function getStatus() 
+	{
+	  return $this->status;
+	}
+	
+	public function setStatus($value) 
+	{
+	  $this->status = $value;
+	}
+	
+	
+	public function getEstoque() 
+	{
+	  return $this->estoque;
+	}
+	
+	public function setEstoque($value) 
+	{
+	  $this->estoque = $value;
+	}
+	
+	
+	public function getFuncionario() 
+	{
+	  return $this->funcionario;
+	}
+	
+	public function setFuncionario($value) 
+	{
+	  $this->funcionario = $value;
+	}
+	
+	public function setId($id){
+		$this->id = $Id;
+	}
+	public function getId(){
+		return $this->id;
+	}
+}
