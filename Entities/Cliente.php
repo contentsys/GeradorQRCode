@@ -49,16 +49,33 @@ class Cliente {
 	 
 	
 	
-	public function getNome()
+	public function getEmail()
 	{
-		return $this->nome;
+		return $this->email;
 	}
 	
-	public function setNome($value)
+	public function setEmail($value)
 	{
-		$this->nome = $value;
+		$this->email = $value;
 	}
 	
+	
+	/**
+	 * @Column(type="string")
+	 */
+	private $telefone;
+	 
+	
+	
+	public function getTelefone()
+	{
+		return $this->telefone;
+	}
+	
+	public function setTelefone($value)
+	{
+		$this->telefone = $value;
+	}
 	
 
 	

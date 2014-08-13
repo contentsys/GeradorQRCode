@@ -249,79 +249,7 @@ include_once "$raizTopo/config.php";
 					</form>
 				</div>
 				
-				<script type="text/javascript">
-				$("#dialogCadastrar").dialog({
-					autoOpen:false,
-					modal: true,
-					title: 'Cadastrar',
-					buttons: {
-							"Enviar Contato": function(){
-								var dialogThizz = this;
-								$.ajax({
-											type: 'get',
-											url: "contato/xml_envia_contato.php",
-											data: {
-												seuNome: $("#txtSeuNome").val(),
-												cidade: $("#txtCidade").val(),
-												cnpj: $("#txtCnpj").val(),
-												email: $("#txtEmail").val(),
-												estado: $("#txtEstado").val(),
-												nomeFantasia: $("#txtNomeFantasia").val(),
-												razaoSocial: $("#txtRazaoSocial").val(),
-												telefone: $("#txtTelefone").val()
-												},
-											dataType: "xml",
-											success: function(xml){
-												var xmlEnviado = $(xml).find("emailEnviado").text();
-												var msg = "";
-												if(xmlEnviado == "0")
-														msg += "Infelizmente o servidor nao pode processar a informa&ccedil;&atilde;o. Envie os dados novamente ou envie os seus dados para o e-mail contato@contentsys.com.br.";
-													else
-														msg += "Mensagem enviada com sucesso. Aguarde e logo um de nossos representantes entrar&eacute; em contato por telefone ou e-mail.";
-												$("#popup").dialog({
-													width: 300,
-													buttons: {
-															"OK": function(){
-																	$(this).dialog("close");
-																	$(dialogThizz).dialog("close");
-																}
-														},
-													title: "Envio de dados do Contato",
-													modal: true
-												});
-												$("#popup").html("");
-												$("#popup").append(msg);
-												$("#popup").dialog("open");
-													
-											}
-										});
-								}
-					},
-					width: 400
-				});
 				
-				$("span.btnCadastrar").click(function(){
-					$("#dialogCadastrar").dialog("open");
-					
-				});
-				$(document).ready(function(){
-				
-				//	alert(document.documentElement.clientHeight + " - " +$("#div_layout").height());
-					setRodapeCorreto();
-				});
-				
-				function setRodapeCorreto(){
-					$("#div_layout").css("min-height", 0);
-					$("#div_layout").height(document.documentElement.clientHeight - $(".footer-login").height());
-					
-				}
-				$(window).resize(function(){
-					setRodapeCorreto();
-					
-				});
-				
-				
-				</script>
 				<div id="popup">
 				
 				</div>
