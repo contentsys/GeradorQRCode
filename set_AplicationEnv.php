@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL ^ E_NOTICE);
 define("APP_NAME", "GeradorQRCode");
 define("APP_SRC", "./");
 define("APPLICATION_ENV", "development");
