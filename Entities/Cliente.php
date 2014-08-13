@@ -43,7 +43,7 @@ class Cliente {
 	
 	
 	/**
-	 * @Column(type="string")
+	 * @Column(type="string", nullable=true)
 	 */
 	private $email;
 	 
@@ -61,7 +61,7 @@ class Cliente {
 	
 	
 	/**
-	 * @Column(type="string")
+	 * @Column(type="string", nullable=true)
 	 */
 	private $telefone;
 	 
