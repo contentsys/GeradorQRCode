@@ -5,9 +5,9 @@ $xml = "";
 
 $id = (isset($_REQUEST["id"]))? get_request("id") :"" ;
 
-$f = $em->find("Entities\Funcionario", $id); 	
+$f = $em->find("Entities\Cliente", $id); 	
 if(empty($f)){
-	$f = new Funcionario();
+	$f = new Cliente();
 }
 
 $em->remove($f);

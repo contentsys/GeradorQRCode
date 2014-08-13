@@ -3,19 +3,6 @@ use Entities\Funcionario;
 
 include_once '../templates/topo.php';
 
-$strBusca = (isset($_REQUEST['strBusca']))? $_REQUEST['strBusca']: '';
-
-$campoBusca = (isset($_REQUEST['campoBusca']))? $_REQUEST['campoBusca']: '';
-
-$q = $em->createQuery("select c from Entities\Funcionario c where 1=1 and :campoBusca = :strBusca");
-$q->setParameter("campoBusca", $campoBusca);
-$q->setParameter("strBusca", $strBusca);
-$funcionarios = $q->getResult();
-
-if(empty($funcionarios)){
-	
-	$funcionarios = new \Doctrine\Common\Collections\ArrayCollection();
-}
 
 ?>
 	
@@ -26,31 +13,24 @@ if(empty($funcionarios)){
 			<div id="tabs-1">
 				<div cols='5'>
 					<div class='field' >
-						<label>Texto</label>
+						<label>Termo de Busca: </label>
 						<input type='text' id='txtBusca' size='35'/>
 					</div>
 					<script>
 						$('#txtBusca').keypress(function(e){
 							if(e.which == 13){
 								$('#btnBuscar').click();
-								}
+							}
 						});
 					</script>
-					<div class='field'>
-						<label>Buscar Por</label>
-						<select id='selBuscas'>
-							<option value='nome'>Nome</option>
-							<option value='matricula'>Matricula</option>
-						</select>
-					</div>
+					
 					<div class='field'>
 						<label>&nbsp;</label>
 						<button id='btnBuscar'>Buscar</button>
 						<script type="text/javascript">
 							$(document).ready(function(){
 								$("#btnBuscar").click(function(){
-									utils.ajax('funcionario/pesquisarFuncionarios', {
-										tipoBusca: $('#selBuscas').val(),
+									utils.ajax('cliente/pesquisarClientes', {
 										strBusca: $('#txtBusca').val()
 									}, function(xml){
 										cont = 0;
@@ -60,18 +40,18 @@ if(empty($funcionarios)){
 											cont++;
 										});
 										index = 0;
-										$(xml).find('funcionario').each(function(){
+										$(xml).find('cliente').each(function(){
 											var id= $(this).find('id').text();
 											var nome = $(this).find('nome').text();
-											var matricula = $(this).find('matricula').text();
+											var email = $(this).find('email').text();
 											var telefone = $(this).find('telefone').text();
 											
 											$('.table_consulta tbody').append(utils.gerarLinha([id,
 																								nome,
-																								matricula,
+																								email,
 																								telefone], 0, 'trConsulta', index++,false));
 												$('#trConsulta_'+ id).click(function(){
-													$('#popupConsultaFuncionario').dialog('open');
+													$('#popupConsultaCliente').dialog('open');
 													$('#hidIdPopup').val(id);
 												});
 										});
@@ -88,7 +68,7 @@ if(empty($funcionarios)){
 					<table class='table_consulta'>
 						<tr>
 							<th>Nome</th>
-							<th>Matricula</th>
+							<th>Email</th>
 							<th>Telefone</th>
 						</tr>
 						<tfoot>
@@ -103,24 +83,24 @@ if(empty($funcionarios)){
 				
 			</div>
 	</div>
-<div id="popupConsultaFuncionario">
+<div id="popupConsultaCliente">
 	<label>O que deseja fazer?</label>
 	<input type="hidden" id="hidIdPopup" />
 </div>
 <script>
-	$('#popupConsultaFuncionario').dialog({
+	$('#popupConsultaCliente').dialog({
 		modal: true,
-		title: 'Consulta funcionario',
+		title: 'Selecione Uma Opcao',
 		autoOpen: false,
 		width: 350,
 		buttons: {
 			"Excluir": function(){
 				$(this).dialog('close');
-				$('#popupExcluirFuncionario').dialog('open');
+				$('#popupExcluirCliente').dialog('open');
 			
 			},
 			"Alterar": function(){
-				window.location = 'FormCadastraFuncionario.php?id=' + $('#hidIdPopup').val();
+				window.location = 'FormCadastraCliente.php?id=' + $('#hidIdPopup').val();
 				
 			},
 			"Cancelar": function(){
@@ -129,37 +109,37 @@ if(empty($funcionarios)){
 		}
 	});
 </script>
-<div id="popupExcluirFuncionario">
-	<label>Deseja excluir o funcionario?</label>
+<div id="popupExcluirCliente">
+	<label>Deseja excluir esse cliente?</label>
 </div>
 <script>
-	$('#popupExcluirFuncionario').dialog({
+	$('#popupExcluirCliente').dialog({
 		modal: true,
-		title: 'Excluir funcionario',
+		title: 'Excluir Cliente',
 		autoOpen: false,
 		width: 250,
 		buttons: {
 			"Sim": function(){
 			$(this).dialog('close');
-				utils.ajax('funcionario/excluir', {
+				utils.ajax('cliente/excluir', {
 					id: $('#hidIdPopup').val()
 					
 						
 				}, function(xml){
 						erro = $(xml).find('erro').text();
 						if(parseInt(erro) == 0){
-							msg = "Funcionario excluido com sucesso!";
+							msg = "Cliente excluido com sucesso!";
 	
 							$("#btnBuscar").click();
 							
 						}
 						else if(parseInt(erro) == 23000){
-							msg = "NAO foi possivel excluir, este funcionario possui itens relacionados!";
+							msg = "NAO foi possivel excluir, este cliente possui itens relacionados!";
 						}
 						else{
-							msg = "Funcionario NAO foi excluido com sucesso!";
+							msg = "Cliente NAO foi excluido!";
 						}
-						alert(msg, 'Funcionario');
+						alert(msg, 'Atencao');
 				});
 			
 			},
