@@ -95,6 +95,7 @@ include_once "$raizTopo/config.php";
 																			var login = new Usuario();
 																			login.nome = $('#txtLogin').val();
 																			login.senha = $('#txtPassword').val();
+																			
 																			login.keepConnected = $('#chkManterConectado').attr("checked");
 																			
 																			login.verificaAutenticacao(successLogin);

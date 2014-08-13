@@ -35,14 +35,10 @@ if(isset($_POST['usuario'])){
 		session_start();
 		$dados = array();
 		$dados[0] = $usuario;
-		$dados[1] = $senha;
 		$dados["idLogin"] = $login->getId();
-		$dados["autoridade"] = $login->getAutoridade();
-		$dados["idFuncionario"] = $login->getFuncionario()->getId();
 		
 		$_SESSION['dados'] = $dados;
 		if($rememberPass == "true"){
-			 
 			 setcookie("dados", serialize($dados), time()+60*60*24*365); 
 		}
 		$usuarioValido = 1;
