@@ -20,19 +20,19 @@
 require_once '../config.php';
 $tool = new \Doctrine\ORM\Tools\SchemaTool($em);
 $classes = array(
-  $em->getClassMetadata('Entities\Funcionario'),
-  $em->getClassMetadata('Entities\Estoque'),
-  $em->getClassMetadata('Entities\Contatos'),
-  $em->getClassMetadata('Entities\ItensPedidos'),
-  $em->getClassMetadata('Entities\Materiais'),
-  $em->getClassMetadata('Entities\Obras'),
-  $em->getClassMetadata('Entities\Pedidos'),
-  $em->getClassMetadata('Entities\StatusPosse'),
-  $em->getClassMetadata('Entities\FuncionarioEstoque'),
-  $em->getClassMetadata('Entities\Login'),
-  $em->getClassMetadata('Entities\Locacao'),
-   $em->getClassMetadata('Entities\Aquisicao')
-//  $em->getClassMetadata('Entities\ItemAquisicao')
+  $em->getClassMetadata('Entities\Cliente')
+//   $em->getClassMetadata('Entities\Estoque'),
+//   $em->getClassMetadata('Entities\Contatos'),
+//   $em->getClassMetadata('Entities\ItensPedidos'),
+//   $em->getClassMetadata('Entities\Materiais'),
+//   $em->getClassMetadata('Entities\Obras'),
+//   $em->getClassMetadata('Entities\Pedidos'),
+//   $em->getClassMetadata('Entities\StatusPosse'),
+//   $em->getClassMetadata('Entities\FuncionarioEstoque'),
+//   $em->getClassMetadata('Entities\Login'),
+//   $em->getClassMetadata('Entities\Locacao'),
+//    $em->getClassMetadata('Entities\Aquisicao')
+// //  $em->getClassMetadata('Entities\ItemAquisicao')
   
   
 );
