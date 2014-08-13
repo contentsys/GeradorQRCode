@@ -28,7 +28,7 @@ include_once "$raizTopo/config.php";
 				
 				<div class='divBody' >
 				
-				
+				<?php echo md5("123KmR2@*)&+");?>
 				<div class='group-login'>
 								<div class='faixa'>
 									&nbsp;

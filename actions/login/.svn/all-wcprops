@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/63/SistemaGj/raiz/actions/login
+END
+excluir.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/41/SistemaGj/raiz/actions/login/excluir.php
+END
+alterarSenha.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/41/SistemaGj/raiz/actions/login/alterarSenha.php
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/40/SistemaGj/raiz/actions/login/index.php
+END
+criarUsuario.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/63/SistemaGj/raiz/actions/login/criarUsuario.php
+END
+verifica-autenticacao.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/63/SistemaGj/raiz/actions/login/verifica-autenticacao.php
+END
+autentica-usuario.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/63/SistemaGj/raiz/actions/login/autentica-usuario.php
+END
+pesquisarUsuarios.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/41/SistemaGj/raiz/actions/login/pesquisarUsuarios.php
+END

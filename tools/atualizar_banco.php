@@ -21,6 +21,7 @@ require_once '../config.php';
 $tool = new \Doctrine\ORM\Tools\SchemaTool($em);
 $classes = array(
   $em->getClassMetadata('Entities\Cliente'),
+$em->getClassMetadata('Entities\Login')
  
   
   
