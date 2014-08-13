@@ -22,14 +22,39 @@ include_once '../templates/topo.php';
 								$('#btnBuscar').click();
 							}
 						});
+						
 					</script>
 					
 					<div class='field'>
 						<label>&nbsp;</label>
 						<button id='btnBuscar'>Buscar</button>
+						<button id='btnEditar'>Editar</button>
+						<button id='btnExcluir'>Excluir</button>
+						<button id='btnQRCode'>Imprimir QR Code</button>
 						<script type="text/javascript">
+							$("#btnExcluir").click(function(){
+									$("#popupExcluirCliente").dialog('open');
+							})
+							$('#btnEditar').click(function(){
+								var idPrimeiroSelecionado = "";
+								$('input[name="id"]:checked').each(function(){
+									if(idPrimeiroSelecionado=="")
+										idPrimeiroSelecionado = $(this).val();
+									
+								});
+								if(idPrimeiroSelecionado != "")
+									window.location = 'FormCadastraCliente.php?id=' + idPrimeiroSelecionado;
+								else
+									alert("Selecione um cliente");
+							});
+							$('#btnQRCode').click(function(){
+								//abrir qrcode
+							});
+							
+						
 							$(document).ready(function(){
 								$("#btnBuscar").click(function(){
+									$("#chkTodos").attr('checked', false);
 									utils.ajax('cliente/pesquisarClientes', {
 										strBusca: $('#txtBusca').val()
 									}, function(xml){
@@ -45,14 +70,15 @@ include_once '../templates/topo.php';
 											var nome = $(this).find('nome').text();
 											var email = $(this).find('email').text();
 											var telefone = $(this).find('telefone').text();
-											
+											var chkbox = '<input type="checkbox" value="'+id+'" name="id" id="id'+id+'"/>';
 											$('.table_consulta tbody').append(utils.gerarLinha([id,
+											                                                    chkbox,
 																								nome,
 																								email,
 																								telefone], 0, 'trConsulta', index++,false));
 												$('#trConsulta_'+ id).click(function(){
-													$('#popupConsultaCliente').dialog('open');
-													$('#hidIdPopup').val(id);
+														$('#id'+id).attr('checked', !$('#id'+id).attr('checked'));
+													
 												});
 										});
 										$('.table_consulta tfoot tr td').html(index + ' Resultado(s) Encontrado(s)');
@@ -67,13 +93,14 @@ include_once '../templates/topo.php';
 				<div>
 					<table class='table_consulta'>
 						<tr>
+							<th><input type="checkbox" id="chkTodos" value='todos' /> <label for="chkTodos" >(Todos)</label></th>
 							<th>Nome</th>
 							<th>Email</th>
 							<th>Telefone</th>
 						</tr>
 						<tfoot>
 							<tr>
-								<td colspan="3">Nenhum Resultado Encontrado</td>
+								<td colspan="4">Nenhum Resultado Encontrado</td>
 							</tr>
 						</tfoot>
 					</table>
@@ -88,6 +115,19 @@ include_once '../templates/topo.php';
 	<input type="hidden" id="hidIdPopup" />
 </div>
 <script>
+	$("#chkTodos").click(function(){
+			
+			var thizz = this;
+			$('input[name="id"]').each(function(){
+				$(this).attr("checked", $(thizz).is(":checked"));
+				
+			});
+	}); 
+	$('input[name="id"]').live('click',function(){
+		if(!$(this).is('checked')){
+			$("#chkTodos").attr('checked', false);
+		}
+	})
 	$('#popupConsultaCliente').dialog({
 		modal: true,
 		title: 'Selecione Uma Opcao',
@@ -121,11 +161,11 @@ include_once '../templates/topo.php';
 		buttons: {
 			"Sim": function(){
 			$(this).dialog('close');
-				utils.ajax('cliente/excluir', {
-					id: $('#hidIdPopup').val()
-					
-						
-				}, function(xml){
+				var data = { 'ids[]' : []};
+				$('input[name="id"]:checked').each(function() {
+				 	 data['ids[]'].push($(this).val());
+				});
+				utils.ajax('cliente/excluir', data, function(xml){
 						erro = $(xml).find('erro').text();
 						if(parseInt(erro) == 0){
 							msg = "Cliente excluido com sucesso!";

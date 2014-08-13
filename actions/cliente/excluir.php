@@ -3,14 +3,17 @@ use Entities\Funcionario;
 
 $xml = "";
 
-$id = (isset($_REQUEST["id"]))? get_request("id") :"" ;
+$id = (isset($_REQUEST["ids"]))? $_REQUEST["ids"] :"" ;
+foreach ($id as $key => $value){
 
-$f = $em->find("Entities\Cliente", $id); 	
-if(empty($f)){
-	$f = new Cliente();
+	$f = $em->find("Entities\Cliente", $value);
+	if(empty($f)){
+		$f = new Cliente();
+	}
+	
+	$em->remove($f);
 }
 
-$em->remove($f);
 $msg = "";
 try {
 	$em->flush();

@@ -9,8 +9,8 @@ if(isset($_REQUEST['id']))
 	$id = $_REQUEST['id'];
 	
 $cliente = $em->find("Entities\Cliente", $id);
-if(empty($funcionario))
-	$cliente = new Cliente();
+if(empty($cliente))
+	$cliente = new \Entities\Cliente();
 	
 ?>
 	<form action="FormCadastraCliente.php">
