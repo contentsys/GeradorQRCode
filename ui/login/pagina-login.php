@@ -28,20 +28,14 @@ include_once "$raizTopo/config.php";
 				
 				<div class='divBody' >
 				
-				<?php echo md5("123KmR2@*)&+");?>
+				
 				<div class='group-login'>
 								<div class='faixa'>
 									&nbsp;
 								</div>
 								<div class='inner-faixa'>
 										<div class='apresentacao'>
-											<br><br>
-											- Solu&ccedil;&atilde;o para a sua Empresa.<br>
-											- Alta Disponibilidade.<br>
-											- Computa&ccedil;&atilde;o em N&uacute;vens.<br>
-											- Emiss&atilde;o de NF-e.<br>
-											- Ordem de Servi&ccedil;o.<br>
-											- Controle de Estoque e muito mais.<br>
+											
 										</div>
 										
 										<div class='form-login-out'>
@@ -82,9 +76,16 @@ include_once "$raizTopo/config.php";
 																	</div>
 																	
 																	<button id="btnLogin" tabindex="3" style=';margin:0' title="Efetuar Login"  >Entrar</button>
-																	<script>
-																		
 																	
+																	<script>
+
+																	
+																		$('#txtPassword').keypress(function(e){
+																			if(e.which == 13){
+																				$('#btnLogin').click();
+																			}
+																		});
+						
 																		$("#btnLogin").button({
 																				text: true,
 																				icons:{
@@ -117,7 +118,7 @@ include_once "$raizTopo/config.php";
 														</table>
 														<div class='cadastrar-login-desc'>
 															
-																Sua Empresa ainda n&atilde;o possui um cadastro? Agende uma reuni&atilde;o com um representante da ContentSys. &Eacute; simples e sem burocracia. <a href='#'><span class='btnCadastrar'>Cadastre-se</span></a>
+																Esta area &eacute; restrita a pessoas autorizadas!
 																
 															
 															
@@ -129,18 +130,7 @@ include_once "$raizTopo/config.php";
 										
 										<div class='novidades'>
 											<div class='body-novidades'>
-												<a href='https://twitter.com/#!/contentsys' target='_blank'><h1><span>imagem passarinho twitter</span> Novidades</h1></a>
-												<div class='twitts'>
-													<ul>
-														
-													</ul>
-													<script type="text/javascript">
-														$(document).ready(function(){
-															getTwitter('contentsys', putTwittsDefault);
-														});
-														
-													</script>
-												</div>
+												
 											</div>
 											
 										</div>

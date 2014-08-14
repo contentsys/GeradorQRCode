@@ -46,7 +46,7 @@ if(empty($cliente))
 				<script type="text/javascript">
 					$("#btnSalvar").click(function(){
 						if($('#txtNome').val() == ''  ){
-							alert('Nome e email sao dados obrigatorios!', 'Atencao');
+							alert('Nome &eacute; obrigatorio!', 'Atencao');
 						
 						}else{
 						
