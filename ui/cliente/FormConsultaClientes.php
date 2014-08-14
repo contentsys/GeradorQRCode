@@ -8,7 +8,7 @@ include_once '../templates/topo.php';
 	
 	<div class="tabs center">
 			<ul>
-				<li><a href="#tabs-1">Buscar</a></li>
+				<li><a href="#tabs-1">Localizar Clientes</a></li>
 			</ul>
 			<div id="tabs-1">
 				<div cols='5'>
@@ -49,6 +49,16 @@ include_once '../templates/topo.php';
 							});
 							$('#btnQRCode').click(function(){
 								//abrir qrcode
+								var data = "";
+								$('input[name="id"]:checked').each(function(cont) {
+									if(cont == 0)
+										data = $(this).val();
+									else
+										data += "," + $(this).val();
+								 	 
+								});
+								
+								window.location = 'gerarQRCode.php?ids='+ data;
 							});
 							
 						

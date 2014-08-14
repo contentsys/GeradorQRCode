@@ -13,12 +13,10 @@ if(empty($cliente))
 	$cliente = new \Entities\Cliente();
 	
 ?>
-	<form action="FormCadastraCliente.php">
-		<input type="submit" value="Adicionar Novo">
-	</form>
+	
 	<div class="tabs center">
 			<ul>
-				<li><a href="#tabs-1">Cliente</a></li>
+				<li><a href="#tabs-1">Cadastro de Cliente</a></li>
 			</ul>
 			<div id="tabs-1">
 				<div cols='4'>
