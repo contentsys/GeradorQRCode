@@ -25,7 +25,7 @@ include_once '../templates/topo.php';
 						
 					</script>
 					
-					<div class='field'>
+					<div  style="display: table; margin: 1em; float: left; height: 70px;margin-top:23px">
 						<label>&nbsp;</label>
 						<button id='btnBuscar'>Buscar</button>
 						<button id='btnEditar'>Editar</button>

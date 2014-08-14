@@ -10,7 +10,7 @@ namespace classes;
 abstract class GeradorPDF{
 	
 	protected $pdf;
-	protected $logomarca;
+	
 	
 	protected $folha;
 	protected $disposicao;
@@ -24,7 +24,7 @@ abstract class GeradorPDF{
 		
 	}
 	
-	public abstract function desenhaCabecalho();
+	
 	
 	
 	

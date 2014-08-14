@@ -31,7 +31,7 @@ var $JStart = array("A"=>103, "B"=>104, "C"=>105);     // Caract�res de s�le
 var $JSwap = array("A"=>101, "B"=>100, "C"=>99);       // Caract�res de changement de jeu
 
 //____________________________ Extension du constructeur _______________________
-function PDF_Code128($orientation='P',$unit='mm',$format='A4') {
+function __construct($orientation='P',$unit='mm',$format='a4') {
 
 	parent::FPDF($orientation,$unit,$format);
 
