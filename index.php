@@ -1,7 +1,7 @@
 <?php 
 session_start();
 if(isset($_REQUEST["removeCookie"])){
-	echo "Deslogando...";
+// 	echo "Deslogando...";
 	session_start(); 
 	unset($_SESSION["dados"]);
 	setcookie("dados", $_COOKIE["dados"], time() - 2 * 10000);

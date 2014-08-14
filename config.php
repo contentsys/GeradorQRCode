@@ -58,10 +58,10 @@ if(APPLICATION_ENV == "development"){
 }
 else if(APPLICATION_ENV == "production"){
 	$conn = array(
-	    'dbname' => '',
-	    'user' => '',
-	    'password' => '',
-	    'host' => 'localhost',
+	    'dbname' => 'jtqrcode',
+	    'user' => 'jtqrcode',
+	    'password' => 'Content@sys201',
+	    'host' => 'jtqrcode.db.9904985.hostedresource.com',
 	    'driver' => 'pdo_mysql',
 	);
 }
