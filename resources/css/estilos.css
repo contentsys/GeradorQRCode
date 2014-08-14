@@ -34,9 +34,10 @@ html,body {
 /* --------------------TOPO--------------------*/
 .out-topo{
 	width: 100%;
-	height: 90px;
+	height: 40px;
 	display: table;
-	background: url('../img/top.png');
+	/*background: url('../img/top.png');*/
+	background: #224499;
 }
 .inner-topo{
 	width: 95%;
@@ -47,14 +48,14 @@ html,body {
 	float: left;
 	background: url('../img/top_sys.png') no-repeat ;
 	width: 261px;
-	height: 54px;
+	height: 25px;
 	
 }
 .right-topo{
 	float: right;
 	background: url('../img/top_logo2.png') no-repeat ;
 	width: 218px;
-	height: 51px;
+	height: 25px;
 	
 }
 /*-----------------------------------------------*/
