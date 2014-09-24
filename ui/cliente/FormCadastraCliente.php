@@ -21,6 +21,10 @@ if(empty($cliente))
 			<div id="tabs-1">
 				<div cols='4'>
 					<div class='field' >
+						<label>Codigo</label>
+						<input type='text' id='txtCodigo' value='<?php echo $cliente->getCodigo();?>' size='30' />
+					</div>
+					<div class='field' >
 						<label>Nome</label>
 						<input type="hidden" value="<?php echo $id;?>" id='hidId' onkeypress="mascara(this,maiusculo)" />
 						<input type='text' id='txtNome' value='<?php echo $cliente->getNome();?>' size='30' onkeypress="mascara(this,maiusculo)" />
@@ -54,7 +58,8 @@ if(empty($cliente))
 								id: $("#hidId").val(),
 								nome: $('#txtNome').val(),
 								telefone: $('#txtTelefone').val(),
-								email: $('#txtEmail').val()
+								email: $('#txtEmail').val(),
+								codigo: $("#txtCodigo").val()
 								
 									
 							}, function(xml){

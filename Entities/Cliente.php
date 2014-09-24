@@ -77,6 +77,25 @@ class Cliente {
 		$this->telefone = $value;
 	}
 	
+	
+	/**
+	 * @Column(type="string", nullable=true)
+	 */
+	private $codigo;
+	
+	
+	
+	public function getCodigo()
+	{
+		return $this->codigo;
+	}
+	
+	public function setCodigo($value)
+	{
+		$this->codigo = $value;
+	}
+	
+	
 
 	
 }

@@ -7,6 +7,7 @@ $id = (isset($_REQUEST["id"]))? get_request("id") :"" ;
 $nome = (isset($_REQUEST["nome"]))? get_request("nome") :"" ;
 $email = (isset($_REQUEST["email"]))? get_request("email") :"" ;
 $telefone = (isset($_REQUEST["telefone"]))? get_request("telefone") :"" ;
+$codigo = (isset($_REQUEST["codigo"]))? get_request("codigo") :"" ;
 
 $c = $em->find("Entities\Cliente", $id); 	
 if(empty($c)){
@@ -16,6 +17,7 @@ if(empty($c)){
 $c->setNome($nome);
 $c->setTelefone($telefone);
 $c->setEmail($email);
+$c->setCodigo($codigo);
 
 $em->persist($c);
 try {

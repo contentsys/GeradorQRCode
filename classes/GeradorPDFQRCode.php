@@ -46,10 +46,16 @@ class GeradorPDFQRCode extends GeradorPDF{
 		$oldX = $x;
 		$oldY = $y;
 
+		
+		
+		$this->pdf->SetFillColor(255,126,24);
+		$this->pdf->SetXY($x, $y);
+		$this->pdf->Cell(200, 50, "", 0,"", "",1);
+		$this->pdf->SetFillColor(255,255,255);
 				
 // 		ini_set("allow_url_fopen", 1);
 		// coloca o logo
-		$logo = "http://chart.apis.google.com/chart?cht=qr&chl=http://www.juiceintime.com/solicitacaoQRCode/send.php?param=".str_replace(" ", "_", $cliente->getNome()."FIMCAMPO".$cliente->getEmail())."FIMCAMPO".str_replace(" ", "_", $cliente->getTelefone())."&chs=320x320&extention.png";
+		$logo = "http://chart.apis.google.com/chart?cht=qr&chl=http://www.juiceintime.com/solicitacaoQRCode/send.php?param=".str_replace(" ", "_", $cliente->getNome()."FIMCAMPO".$cliente->getEmail())."FIMCAMPO".str_replace(" ", "_", $cliente->getTelefone())."FIMCAMPO".str_replace(" ", "_", $cliente->getCodigo())."&chs=320x320&extention.png";
 		$logoInfo=getimagesize($logo);
 		$logoW=$logoInfo[0];
 		$logoH=$logoInfo[1];
@@ -61,27 +67,42 @@ class GeradorPDFQRCode extends GeradorPDF{
 			$imgW = $w/2;
 			$imgH = $logoHmm * ($imgW/$logoWmm);
 		}
-		$this->pdf->Image($logo,$x,$y,50,50,'png');
+		$this->pdf->Image($logo,$x+5,$y+5,40,40,'png');
 
-		$y1= $y+47;
+		$y1= $y+37+9;
 		$w=45;
 		$h = 5;
-		$aFont = array('font'=>'Arial','size'=>10,'style'=>'I');
-		$texto = $cliente->getNome();//$logo; //
+		$aFont = array('font'=>'Arial','size'=>8,'style'=>'B');
+		$codigo = $cliente->getCodigo();
+		$texto =  (empty($codigo))? $cliente->getNome() : $codigo . " - " . $cliente->getNome();//$logo; //
+		
+		$this->pdf->SetTextColor(255,255,255);
 		$this->__textBox($x+5,$y1,$w,$h,$texto,$aFont,'T','L',0,'');
 		
-		$x+=50;
-		
-		if($x>200){
-			$y +=55;
-			$x=5;
+		// coloca o logo
+		$logo = "../../resources/img/acabaram-as-capsulas-title.png";
+		$logoInfo=getimagesize($logo);
+		$logoW=$logoInfo[0];
+		$logoH=$logoInfo[1];
+		$logoWmm = ($logoW/72)*25.4;
+		$imgW = $logoWmm;
+		$logoHmm = ($logoH/72)*25.4;
+		$imgH = $logoHmm;
+		if ( $logoWmm > $w/2 ){
+			$imgW = $w/2;
+			$imgH = $logoHmm * ($imgW/$logoWmm);
 		}
-		if($y>=280){
+		$this->pdf->Image($logo,$x+65,$y,135,50,'png');
+		
+		$y +=53;
+		
+		if($y>=270){
 			$y=5;
 			$x=5;
 		}
 		
-		return array("x"=> $x, "y"=>$y);
+		
+		return array("x"=> 5, "y"=>$y);
 
 	}
 	
